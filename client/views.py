@@ -1,3 +1,4 @@
+import datetime
 from datetime import date
 
 from django.shortcuts import render
@@ -6,8 +7,16 @@ from doer import storage, config
 from doer.model import Data
 
 
-def today(request):
+def _day(request, date_: date):
     data = Data(storage.database(), config.context())
-    today_ = data.day(date.today())
-    context = {'today': today_}
-    return render(request, 'today.html', context)
+    day_ = data.day(date_)
+    context = {'date': datetime.datetime(date_.year, date_.month, date_.day), 'day': day_}
+    return render(request, 'day.html', context)
+
+
+def day(request, year, month, day):
+    return _day(request, datetime.date(year, month, day))
+
+
+def today(request):
+    return _day(request, date.today())

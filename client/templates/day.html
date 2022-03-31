@@ -9,10 +9,10 @@
     <title>Today</title>
 </head>
 <body>
-<h1>Today</h1>
+<h1>{{date|date:"D d M Y"}}</h1>
 <h2>Priorities</h2>
 <ol type="1">
-    {% for priority in today.priorities %}
+    {% for priority in day.priorities %}
     <li>{{priority}}</li>
     {% endfor %}
 </ol>
