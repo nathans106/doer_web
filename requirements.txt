@@ -1,2 +1,5 @@
 Django~=4.0.3
+google-api-core~=2.7.1
+google-cloud-secret-manager~=2.9.2
+
 git+https://github.com/nathans106/doer.git@v1.0.0#egg=doer
