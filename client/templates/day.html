@@ -5,16 +5,28 @@
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Today</title>
+  <meta charset="utf-8">
+  <title>Day</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Display all information for a day">
 </head>
 <body>
-<h1>{{date|date:"D d M Y"}}</h1>
-<h2>Priorities</h2>
-<ol type="1">
-    {% for priority in day.priorities %}
-    <li>{{priority}}</li>
-    {% endfor %}
-</ol>
+  <header>
+    <h1>{{date|date:"D d M Y"}}</h1>
+  </header>
+
+  <article>
+    <h2>Priorities</h2>
+        <ol type="1">
+            {% for priority in day.priorities %}
+            <li>{{priority}}</li>
+            {% endfor %}
+        </ol>
+  </article>
+
+  <footer>
+    Version {{version}}
+  </footer>
 </body>
 </html>
