@@ -1,3 +1,6 @@
 [submodule "client/doer"]
 	path = client/doer
 	url = https://github.com/nathans106/doer.git
+[submodule "ext/doer"]
+	path = ext/doer
+	url = git@github.com:nathans106/doer.git
