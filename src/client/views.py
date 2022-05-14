@@ -15,7 +15,8 @@ def _day(request, date_: date):
     context = {
         'date': datetime.datetime(date_.year, date_.month, date_.day),
         'day': day_,
-        'version': doer_web.__version__}
+        'version': doer_web.__version__,
+    }
 
     return render(request, 'day.html', context)
 
