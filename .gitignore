@@ -1,3 +1,4 @@
 /.idea/
 *.pyc
 /venv/
+/src/doer_web.egg-info/
